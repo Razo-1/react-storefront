@@ -1,0 +1,7 @@
+@font-face {
+    font-family:robot;
+    src: url('../../Assest/Font/robot.ttf');
+}
+*{
+    font-family:robot;
+}

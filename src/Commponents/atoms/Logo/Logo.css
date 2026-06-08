@@ -1,4 +1,6 @@
 .Logo a{
-    color:black;
+    color:transparent;
     text-decoration:none;
+    -webkit-text-stroke:1px black;
+    text-transform:uppercase;
 }

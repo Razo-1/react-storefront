@@ -2,6 +2,7 @@ import { RouterProvider } from 'react-router-dom';
 import { getRouter } from './Routers/index.jsx'
 import { mainUrl } from '../shared/API'
 import { useEffect, useState } from 'react';
+import './style/Style.css'
 
 function App({ resource }){
     let [data,setData] = useState([])
