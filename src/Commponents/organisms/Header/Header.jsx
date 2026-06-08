@@ -1,13 +1,15 @@
 import { Logo,SigUp } from '../../atoms'
 import { NavBar } from '../../molecules/NavBar/NavBar.jsx'
-
+import './Header.css'
 
 function Header({nav}){
     return(
-        <header>
-            <Logo/>
-            <NavBar nav={nav}/>
-            <SigUp/>
+        <header className='Header'>
+            <div className='container'>
+                <Logo/>
+                <NavBar nav={nav}/>
+                <SigUp/>
+            </div>
         </header>
     )
 }

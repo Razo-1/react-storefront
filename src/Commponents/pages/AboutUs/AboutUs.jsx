@@ -1,0 +1,5 @@
+function AboutUs(){
+
+}
+
+export { AboutUs }
