@@ -12,7 +12,7 @@ function Home(){
             <div className={style.firstImage}>
                 <h1>Discover a world of<br/> quality and style</h1>
                 <div className={style.block}>
-                    <button className={style.button}><NavLink to={`/Products`}><span>Shop</span></NavLink></button>
+                    <NavLink to={`/Products`}><button className={style.button}><span>Shop</span></button></NavLink>
                     <SigUp />
                 </div>
             </div>
