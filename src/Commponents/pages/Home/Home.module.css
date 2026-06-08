@@ -1,0 +1,100 @@
+
+.main{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column ;
+    margin-top:110px;
+}
+.firstImage{
+    width:95%;
+    margin-bottom:30px;
+    height:600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../../Assest/Image/1.jpg');
+    background-size: cover;
+    border-radius:20px;
+    box-sizing: border-box;
+    box-shadow: rgba(95, 53, 26, 0.5) 0px 8px 24px;
+    padding-left:50px;
+}
+
+.firstImage h1{
+    font-size:100px;
+    color:white;
+}
+.firstImage button{
+    width:150px;
+    height:50px;
+    font-size:18px;
+}
+.container{
+    display: flex;
+    gap:30px;
+    width:95%;
+}
+.second{
+    width:60%;
+    box-shadow: rgba(0, 17,45, 0.8) 0px 8px 24px;
+    border-radius:20px;
+}
+.second img{
+    width:100%;
+    border-radius:20px;
+}
+.three{
+    width:40%;
+}
+.three img{
+    width:100%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 8px 24px;
+    border-radius:20px
+}
+.button {
+ width:200px;   
+ display: inline-block;
+ border-radius: 50px;
+ border: none;
+ background: #f95959;
+ color: white;
+ font-family: inherit;
+ text-align: center;
+ font-size: 13px;
+ box-shadow: 0px 14px 56px -11px #f95959;
+ width: 10em;
+ padding:5px;
+ transition: all 0.4s;
+ cursor: pointer;
+}
+
+.button span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.4s;
+}
+.button a{
+    all:unset;
+}
+
+.button span:after {
+ content: 'Now';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -10px;
+ transition: 0.7s;
+}
+
+.button:hover span {
+ padding-right: 2.5em;
+}
+
+.button:hover span:after {
+ opacity: 4;
+ right: 0;
+}
+.block{
+    display: flex;
+    gap:20px;
+}

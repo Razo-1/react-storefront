@@ -1,6 +1,18 @@
 .Logo a{
-    color:transparent;
+    color:transparent !important;
     text-decoration:none;
-    -webkit-text-stroke:1px black;
+    -webkit-text-stroke:1px white;
     text-transform:uppercase;
 }
+.Logo a{
+    position:relative;
+}
+.Logo a::after{
+    content:'';
+    width:100%;
+    position:absolute;
+    height:1px;
+    background-color:transparent;
+    bottom:-5px;
+    left:0;
+}   

@@ -10,7 +10,7 @@ function getRouter({resource,data}){
         element : <LayOut nav={resource}/>,
         children : [
             {
-                path : '/Home',
+                index : true,
                 element : <Home />
             },
             {

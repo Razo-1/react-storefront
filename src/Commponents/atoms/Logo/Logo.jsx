@@ -4,7 +4,7 @@ import './Logo.css'
 function Logo(){
     return(
         <div className="Logo">
-            <h1><NavLink to={`/`}>Logo</NavLink></h1>
+            <h1><NavLink to={`/`}>bacike</NavLink></h1>
         </div>
     )
 }

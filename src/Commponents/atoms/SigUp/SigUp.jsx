@@ -1,9 +1,9 @@
-
+import './SigUp.css'
 
 function SigUp(){
     return(
         <div>
-            <button>SigUp</button>
+            <button className="button">Sig up</button>
         </div>
     )
 }

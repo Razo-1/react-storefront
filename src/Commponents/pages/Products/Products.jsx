@@ -13,7 +13,7 @@ function Products({ data }){
                     <h2>Price: {el.price}</h2>
                     <h3>Category: {el.category}</h3>
                     <div className='rating'><FaRegStar /> <p>{el.rating.rate}</p></div>
-                    <button class="btn">
+                    <button className="btn">
                         <span className="btn__visible">Buy Now</span>
                         <span className="btn__invisible">Only {el.rating.count} left</span>
                     </button>

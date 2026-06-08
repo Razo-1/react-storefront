@@ -1,5 +1,9 @@
 .Header{
     width:100%;
+    position:fixed;
+    background-color: #3c3c3c;
+    z-index:999;
+    top:0;
 }
 .container{
     width:100%;
@@ -8,4 +12,7 @@
     justify-content:space-between;
     margin:0 auto;
     align-items: center;
+}
+.container a{
+    color:white;
 }
