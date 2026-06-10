@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Provider } from './Context'
 import './style/Style.css'
 
-function App({ resource }){
+function App({ resource,bank,month }){
     let [data,setData] = useState([])
     let [cart,setCart] = useState([])
     
@@ -23,7 +23,14 @@ function App({ resource }){
             let isTher = cart.find(el => el.id === arg.id)
                 if(isTher){
                     if(isTher.rating.count){
-                        setCart(prev => prev.map(item => ({...item,rating :{...item.rating,count : item.rating.count - 1},  count : ++item.count,totalPrice : item.count * item.price })))
+                        setCart(prev => prev.map(item => {
+                            if(isTher.id === item.id){
+                                let sum = Number((item.count * item.price).toFixed(1))
+                                return {...item,rating :{...item.rating,count : item.rating.count - 1},  count : ++item.count,totalPrice :  sum}
+                            }else{
+                                return {...item}
+                            }
+                        }))
                         setData(prev => prev.map(it => {
                             if(isTher.id === it.id){
                                 return {...it,rating :{...it.rating,count :it.rating.count -1}}
@@ -33,23 +40,31 @@ function App({ resource }){
                         }))
                     }
                 }else{
-                    setCart([...cart,arg])
+                    setData(prev => prev.map(it => {
+                            if(arg.id === it.id){
+                                return {...it,rating :{...it.rating,count :it.rating.count - 1}}
+                            }else{
+                                return {...it}
+                            }
+                        }))
+                    setCart([...cart,{...arg,count : 1 ,rating : {...arg.rating, count : arg.rating.count - 1}}])
                 }
                 }else{
                     setData(prev => prev.map(it => {
                             if(arg.id === it.id){
-                                setCart([{...it,rating :{...it.rating,count :it.rating.count -1}}])    // ete order datarka avelacra order-um u Data-i count 1-ov poqracra
-                                return {...it,rating :{...it.rating,count :it.rating.count -1}}
+                                setCart([{...it,rating :{...it.rating,count :it.rating.count -1},count : 1}])    // ete order datarka avelacra order-um u Data-i count 1-ov poqracra
+                                return {...it,rating :{...it.rating,count :it.rating.count -1,}}
                             }else{
                                 return {...it}
                             }
                         }))
                 }                
     }
+
     
     let router = getRouter({resource,data})
     return(
-        <Provider value={{addToCart,cart}}>
+        <Provider value={{addToCart,setCart,cart,setData,bank,month}}>
             <RouterProvider router={router}/> 
         </Provider>
     )

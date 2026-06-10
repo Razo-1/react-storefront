@@ -97,3 +97,14 @@
 .btn:focus {
   outline: none;
 }
+.calulator{
+  position: absolute;
+  top:55%;
+  left:15px;
+  font-size:18px;
+  color: #2ba8fb;
+  cursor: pointer;
+}
+.calulator svg:hover{
+  filter: drop-shadow(2px 2px 2px #2ba8fb);
+}

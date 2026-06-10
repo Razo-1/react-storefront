@@ -1,0 +1,62 @@
+.image{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+}
+.info h2{
+    font-size:18px;
+    color:white;
+    max-width:200px;
+    font-weight:400;
+    letter-spacing:1px;
+    margin:0;
+}
+.info h3{
+    font-size: 15px;
+    color:white;
+    font-weight:400;
+    margin:20px 0 0 0;
+    letter-spacing:1px;
+}
+.addOrRemove{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    align-self: start;
+    margin:0 30px;
+    width:20%;
+}
+.addOrRemove button{
+    border-radius:50%;
+    width:30px;
+    border:1px solid black;
+    height:30px;
+    background-color:transparent;
+    cursor:pointer;
+}
+.addOrRemove button:active{
+    width:29px;
+    height:29px;
+}
+.totalPrice{
+    width:20%;
+    display: flex;
+    align-self: start;
+    align-items: center;
+    gap:20px;
+    flex-direction: column;
+
+}
+.totalPrice h3{
+    margin:0;
+}
+.totalPrice p{
+    cursor: pointer;
+    margin:0;
+    text-decoration:underline;
+}
