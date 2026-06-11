@@ -35,7 +35,7 @@ function Products({ data }){
                 </div>
             )
         })}
-        <Bank elem={elem} isActiv={isActiv}/>
+        <Bank elem={elem} isActiv={isActiv} setIsActiv={setIsActiv}/>
     </div>
    )
 }
