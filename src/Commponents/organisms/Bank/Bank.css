@@ -144,3 +144,8 @@
 .system li p:not(:first-child) {
     text-align: right;
 }
+.off{
+    visibility:hidden;
+    opacity:0;
+    position: fixed;
+}

@@ -11,13 +11,11 @@ function Order(){
 
     return(
         <div className="Order">
-            
-            <h1>Basket:</h1>
+            <h1 className={`${total ? 'pannier' : ''}`}>Basket:</h1>
             {total ?  '' : <p className="empty">"It's empty here now."</p>}
             <div className="partOrder">
                 {cart?.map(el => <div className="basket" key={el.id}><Basket el={el}/></div>)}
                 {total ? <div className="ok"><h1>Total amount: {total.toFixed(1)} USD</h1><SigUp/></div> : ''}
-                
             </div>
         </div>
     )

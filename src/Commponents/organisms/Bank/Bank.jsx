@@ -41,7 +41,7 @@ function Bank({elem,isActiv,setIsActiv}){
 
    return (
     <div onClick={(e) => closeBank(e)} className={isActiv ? 'on' : ''}>
-        <div className="credit">
+        <div className={`credit ${isActiv ? '' : 'off'}`}>
 
             <div className="credit-header">
                 <h1>{item.title}</h1>
