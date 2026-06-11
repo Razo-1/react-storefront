@@ -23,3 +23,6 @@
   box-shadow: none;
   transform: scale(0.98);
 }
+.button a{
+  text-decoration:none;
+}

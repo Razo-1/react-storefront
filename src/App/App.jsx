@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Provider } from './Context'
 import './style/Style.css'
 
-function App({ resource,bank,month }){
+function App({ resource,bank,month,initalValue,schema }){
     let [data,setData] = useState([])
     let [cart,setCart] = useState([])
     
@@ -64,7 +64,7 @@ function App({ resource,bank,month }){
     
     let router = getRouter({resource,data})
     return(
-        <Provider value={{addToCart,setCart,cart,setData,bank,month}}>
+        <Provider value={{addToCart,setCart,cart,setData,bank,month,initalValue,schema}}>
             <RouterProvider router={router}/> 
         </Provider>
     )

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { LayOut } from '../../Commponents'
-import { Products,Home,AboutUs,Order } from '../../Commponents';
+import { Products,Home,AboutUs,Order,Login } from '../../Commponents';
+
 
 function getRouter({resource,data}){
 
@@ -24,6 +25,10 @@ function getRouter({resource,data}){
             {
                 path : '/About Us',
                 element : <AboutUs/>
+            },
+            {
+                path : '/Sig-up',
+                element : <Login/>
             }
         ]
     }

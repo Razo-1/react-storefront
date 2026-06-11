@@ -1,0 +1,33 @@
+.Login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f3;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 16px;
+    border: 0.5px solid rgba(0,0,0,0.1);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.submit{
+    width:200px;
+    height:40px;
+    align-self: center;
+    border-radius:30px;
+    border:none;
+    background-color: #185fa5;
+    color:white;
+    font-size:16px;
+    cursor: pointer;
+}
+.submit:active{
+    background-color: #176cc2;
+}

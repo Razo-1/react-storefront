@@ -58,5 +58,14 @@
 .totalPrice p{
     cursor: pointer;
     margin:0;
-    text-decoration:underline;
+    position: relative;
+}
+.totalPrice p::after{
+    content:'';
+    position: absolute;
+    bottom:-5px;
+    width:85%;
+    height:1px;
+    left:15%;
+    background-color:black;
 }

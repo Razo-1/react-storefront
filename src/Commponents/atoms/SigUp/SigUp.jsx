@@ -1,9 +1,10 @@
+import { NavLink } from 'react-router-dom'
 import './SigUp.css'
 
 function SigUp(){
     return(
         <div>
-            <button className="button">Sig up</button>
+            <NavLink to={'/Sig-up'} className={({isActive}) => isActive ? '' : ''}><button className="button">Sig up</button></NavLink>
         </div>
     )
 }
