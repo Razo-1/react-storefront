@@ -21,9 +21,7 @@ function Basket({el}){
                 }else{
                     return {...el}
                 }
-            }))  
-            console.log(arg);
-            
+            }))              
             setData(prev => prev.filter(el => el.id === arg.id ? el.rating.count += 1: el))         
         }
     }

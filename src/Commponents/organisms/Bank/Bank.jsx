@@ -27,12 +27,16 @@ function Bank({elem,isActiv,setIsActiv}){
     let calculate = () => {
         if(!payment.period) return
 
-        let numPer = item.price + (item.price * procent / 100)
-        let mon = Array.from( {length : payment.period}, (el,ind) => ind + 1)
-        let onlyPercentage = (numPer - item.price) / payment.period
-        let onlyOriginalNum = item.price / payment.period
-        let all = onlyPercentage + onlyOriginalNum
-        setPaymentList({numPer,mon,onlyPercentage,onlyOriginalNum,all})        
+        if(payment.Adv < elem.price){
+            setPayment({...payment,Adv :0})
+        }
+            let numPer = item.price + (item.price * procent / 100)
+            let mon = Array.from( {length : payment.period}, (el,ind) => ind + 1)
+            let onlyPercentage = ( payment.Adv - (numPer - item.price)) / payment.period
+            let onlyOriginalNum = item.price / payment.period
+            let all = onlyPercentage + onlyOriginalNum
+            setPaymentList({numPer,mon,onlyPercentage,onlyOriginalNum,all}) 
+               
     }
 
     let closeBank = (e) => {
