@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { Context } from "../../../App/Context"
+import { IoMdClose } from "react-icons/io";
 import './Basket.css'
 
 function Basket({el}){
@@ -20,7 +21,10 @@ function Basket({el}){
                 }else{
                     return {...el}
                 }
-            }))           
+            }))  
+            console.log(arg);
+            
+            setData(prev => prev.filter(el => el.id === arg.id ? el.rating.count += 1: el))         
         }
     }
 
@@ -48,7 +52,7 @@ function Basket({el}){
                         </div>
                         <div className="totalPrice">
                             <h3>{el.totalPrice} USD</h3>
-                            <p onClick={() => remove(el)}>X Remove</p>
+                            <div onClick={() => remove(el)}><IoMdClose/> Remove</div>
                         </div>
         </>
     )

@@ -55,17 +55,21 @@
 .totalPrice h3{
     margin:0;
 }
-.totalPrice p{
+.totalPrice div{
     cursor: pointer;
     margin:0;
+    display: flex;
+    align-items: center;
+    gap:5px;
     position: relative;
+    color:#A32D2D ;
 }
-.totalPrice p::after{
+.totalPrice div::after{
     content:'';
     position: absolute;
     bottom:-5px;
-    width:85%;
+    width:70%;
     height:1px;
-    left:15%;
-    background-color:black;
+    left:30%;
+    background-color:#A32D2D ;
 }
